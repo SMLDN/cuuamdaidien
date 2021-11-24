@@ -1,0 +1,179 @@
+#main-container{
+    background-image: url('/static/img/ui/bg.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1113px;
+    height: 711px;
+    display: flex;
+    margin: 0 auto;
+}
+
+.list-frame{
+    flex-grow: 1;
+}
+
+.center-frame{
+    flex-grow: 1;
+}
+
+.detail-frame{
+    max-width: 550px;
+    min-width: 550px;
+}
+
+.inner-desc{
+    padding-right: 30px;
+}
+
+.inner-icon{
+    background-image: url('/static/img/ui/skill-border.png');
+    width: 55px;
+    height: 55px;
+    padding: 3px;
+    background-repeat: no-repeat;
+    background-size: 101%;
+}
+
+.inner-icon img{
+    /* height: 38px;
+    width: 38px; */
+    margin: 3px;
+}
+
+.inner-header{
+    display: flex;
+    align-items:center;
+}
+
+.inner-header input{
+    width: 25px;
+    padding: 3px;
+}
+
+.inner-header .level{
+    padding: 10px;
+}
+
+.detail-frame h1{
+    text-align: center;
+    margin: 0.1em;
+    font-size: 1.3em;
+    line-height: 2em;
+    background-image: url('/static/img/ui/title.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.inner-header .type,
+.inner-header .prop{
+    padding: 10px;
+}
+
+.inner-detail-info{
+    color: white;
+    background-color: black;
+    opacity: 0.7;
+    border: 1px solid black;
+    padding: 7px;
+    border-radius: 3px;
+    font-family: tahoma;
+    margin-top: 6px;
+}
+
+.inner-detail-info .max-equip-point{
+    color: #f6c504    ;
+    margin: 5px 0;
+}
+
+.inner-detail-info .effect-info,
+.inner-detail-info .effect-ext-info,
+.inner-detail-info .active{
+    color: #bbb;
+}
+
+.inner-detail-info .active{
+    margin-bottom: 5px;
+}
+
+.detail-container{
+    padding:10px 0;
+    padding-right: 40px;
+    padding-left: 30px;
+}
+
+.fake-pink{
+    color:#dc5a70;
+}
+
+.center-frame{
+    padding-top: 50px;
+    max-width: 260px;
+    min-width: 260px;
+}
+
+.list-frame{
+    padding-left: 50px;
+    overflow: auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-right: 20px;
+}
+
+.list-frame .school{
+    font-size: 1em;
+    background-image: url('/static/img/ui/rbtn-in.png');
+    background-repeat: no-repeat;
+    padding-left: 14px;
+    color: #705f4a;
+    font-weight: 800;
+    height: 30px;
+    padding-top: 6px;
+    margin-top: 3px;
+}
+
+.list-frame .school:hover{
+    cursor: pointer;
+}
+
+.list-frame .inner{
+    font-size: 1em;
+    font-weight: 800;
+    margin-bottom: 3px;
+}
+
+.list-frame .inner a{
+    text-decoration: none;
+    color: #705f4a;
+    padding-left: 15px;
+}
+
+.list-frame .inner a.selected{
+    color: #a81b15;
+}
+
+.detail-frame a.change-level{
+    font-size: 1.2em;
+    padding: 1px 5px;
+}
+
+.detail-frame .effect-ext-info .effect-element-1{
+    color: #ff3030;
+    font-weight: 700;
+}
+
+.detail-frame .effect-ext-info .effect-element-2{
+    color: #9932cd;
+    font-weight: 700;
+}
+
+
+.detail-frame .effect-ext-info .effect-element-3{
+    color: #cfb53b;
+    font-weight: 700;
+}
+
+.inner-list{
+    margin-bottom: 10px;
+}
+

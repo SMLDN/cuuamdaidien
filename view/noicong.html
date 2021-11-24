@@ -1,0 +1,20 @@
+{layout 'layout.html'}
+
+{block title}Cửu Âm Chân Kinh Đại Điển{/block}
+
+{block head}
+{/block}
+
+{block body}
+
+
+{foreach $data as $d}
+<h3>{$d["name"]}</h3>
+{ifset $d["inner"]}
+    <div n:foreach="$d['inner'] as $i">
+        <a href="/noi-cong/{$i['slug']}">{$i["name"]}</a>
+    </div>
+{/ifset}
+{/foreach}
+
+{/block}

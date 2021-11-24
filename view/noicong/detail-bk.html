@@ -1,0 +1,63 @@
+{layout '../layout.html'}
+
+{block title}Cửu Âm Chân Kinh Đại Điển{/block}
+{block head}
+<!-- <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script> -->
+{/block}
+
+
+{block body}
+
+<div x-data="noiCong">
+  Công lực:
+  <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}">-</a>
+  <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}">+</a>
+  <input value="{$currentLevel}">
+  <button onclick="jumpTo()">Tới</button>
+  tầng
+  ---<br>
+  Lực Tay: <span x-text="currentInfo.lucTay">{$lucTay}</span> <br>
+  Thân Pháp: <span x-text="currentInfo.thanPhap">{$thanPhap}</span><br>
+  Nội Tức: <span x-text="currentInfo.noiTuc">{$noiTuc}</span><br>
+  Canh Khí: <span x-text="currentInfo.canhKhi">{$canhKhi}</span><br>
+  Thể Phách: <span x-text="currentInfo.thePhach">{$thePhach}</span><br>
+
+  -----<br>
+  Nội công phát huy tối đa thực lực trang bị<br>
+
+  Lực Tay: {$lucTay*1.5|floor}<br>
+  Thân Pháp: {$thanPhap*1.5|floor}<br>
+  Nội Tức: {$noiTuc*1.5|floor}<br>
+  Canh Khí: {$canhKhi*1.5|floor}<br>
+  Thể Phách: {$thePhach*1.5|floor}<br>
+
+  ----<br>
+  Vận hành kích hoạt:<br>
+
+  Khí huyết cực hạn +<span x-text="currentInfo.maxHp">{$maxHp}</span><br>
+  Nội lực tối đa +<span x-text="currentInfo.maxMp">{$maxMp}</span><br>
+  Sức đỡ đòn cực hạn +<span x-text="currentInfo.maxParry">{$maxParry}</span><br>
+  Nội công phòng +<span x-text="currentInfo.innerDef">{$innerDef}</span><br>
+
+  {if $type == '0'}
+  Sát thương của chiêu thức mang thuộc tính Dương, Cương +20%<br>
+  Sát thương của chiêu thức mang thuộc tính Thái Cực +16%<br>
+  {elseif $type == '1'}
+  Sát thương của chiêu thức mang thuộc tính Âm, Nhu +20%<br>
+  Sát thương của chiêu thức mang thuộc tính Thái Cực +16%<br>
+  {else}
+  Sát thương của chiêu thức mang thuộc tính Thái Cực +20%<br>
+  Sát thương của chiêu thức mang thuộc tính Dương, Cương, Âm, Nhu +16%<br>
+  {/if}
+
+  ----<br>
+  Đặc hiệu:<br>
+  <span x-text="currentInfo.effectLevel ? repository.effect[currentInfo.effectLevel] : ''"></span><br>
+  {$effectInfo}
+</div>
+{/block}
+
+{block post-body}
+<!-- <script src="/static/js/noi-cong.js"></script> -->
+<script src="/static/js/noi-cong-common.js"></script>
+{/block}

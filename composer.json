@@ -1,0 +1,32 @@
+{
+    "name": "smldn/cadd",
+    "description": "",
+    "type": "project",
+    "version": "0.0.1-beta1",
+    "require": {
+      "slim/psr7": "1.5.0",
+      "slim/slim": "4.9.0",
+      "aura/di": "4.1.0",
+      "illuminate/database": "8.65.0",
+      "vlucas/phpdotenv": "5.0.0",
+      "latte/latte": "2.10.4"
+    },
+    "require-dev": {
+      "robmorgan/phinx": "0.12.9",
+      "symfony/var-dumper": "v5.3.8",
+      "symfony/yaml": "v5.3.6"
+    },
+    "autoload": {
+      "psr-4": {
+        "Aloha\\": "app/Aloha",
+        "Cadd\\": "app/Cadd"
+      }
+    },
+    "authors": [
+      {
+        "name": "Ano",
+        "email": "aloha@bloha.com"
+      }
+    ],
+    "minimum-stability": "stable"
+  }

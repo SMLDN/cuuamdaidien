@@ -1,0 +1,139 @@
+{layout '../layout.html'}
+
+{block title}Cửu Âm Chân Kinh Đại Điển{/block}
+{block head}
+<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="/static/css/noi-cong-detail.css">
+{/block}
+
+
+{block body}
+<div id="main-container">
+
+  <div class="list-frame">
+    {foreach $schoolList as $s}
+    {if $inner->school->id == $s["id"]}
+    <div x-data="{ showFlg: true }">
+    {else}
+    <div x-data="{ showFlg: false }">
+    {/if}
+      <div class="school" @click="showFlg = !showFlg">{$s["name"]}</div>
+      {ifset $s["inner"]}
+      <div class="inner-list" x-show="showFlg">
+        <div class="inner" n:foreach="$s['inner'] as $i">
+          <a n:class='$i["id"] == $inner->id ? "selected" : ""' href="/noi-cong/{$i['slug']}/1">{$i["name"]}</a>
+        </div>
+      </div>
+      {/ifset}
+    </div>
+    {/foreach}
+  </div>
+
+  <div class="center-frame">
+    <h3 class="inner-desc">{$inner->desc}</h3>
+  </div>
+
+  <div class="detail-frame" x-data="noiCong" x-init="currentLevel = {$detail->level}; levelUrl='{$levelUrl}'">
+    <div class="detail-container">
+
+      <h1>{$inner->name}</h1>
+
+      <div class="inner-header">
+        <div class="inner-icon">
+          <img src="{$imageUrl}" />
+        </div>
+        <div class="level">
+          Công lực<br>
+          <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}" class="change-level">-</a>
+          <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}" class="change-level">+</a>
+          <input x-model="currentLevel"> <span>/{$inner->maxLevel}</span>
+          <button @click="jump">Tới</button>
+        </div>
+        <div class="prop">
+          Thuộc về: {$inner->school->name}<br>
+          Nộ khí tối đa: {$inner->maxRage}<br>
+        </div>
+        <div class="type">
+          <div>
+            {if $inner->type == '0'}
+            <img src="/static/img/ui/duong.png" />
+            {elseif $inner->type == '1'}
+            <img src="/static/img/ui/am.png" />
+            {else}
+            <img src="/static/img/ui/thai-cuc.png" />
+            {/if}
+          </div>
+          {if $inner->type == '0'}
+          <div>
+            <img src="/static/img/ui/cuong.png" />
+          </div>
+          {elseif $inner->type == '1'}
+          <div>
+            <img src="/static/img/ui/nhu.png" />
+          </div>
+          {/if}
+        </div>
+
+      </div>
+
+
+
+      <div class="inner-detail-info">
+
+        Lực Tay: +{$detail->lucTay}<br>
+        Thân Pháp: +{$detail->thanPhap}<br>
+        Nội Tức: +{$detail->noiTuc}<br>
+        Canh Khí: +{$detail->canhKhi}<br>
+        Thể Phách: +{$detail->thePhach}<br>
+
+        <div class="max-equip-point">
+          <b>Nội công phát huy tối đa thực lực trang bị</b><br>
+          Lực Tay: +{$detail->lucTay*1.5|floor}<br>
+          Thân Pháp: +{$detail->thanPhap*1.5|floor}<br>
+          Nội Tức: +{$detail->noiTuc*1.5|floor}<br>
+          Canh Khí: +{$detail->canhKhi*1.5|floor}<br>
+          Thể Phách: +{$detail->thePhach*1.5|floor}<br>
+        </div>
+
+        <b>Vận hành kích hoạt:</b><br>
+        <div class="active">
+          Khí huyết cực hạn +{$detail->maxHp}<br>
+          Nội lực tối đa +{$detail->maxMp}<br>
+          Sức đỡ đòn cực hạn +{$detail->maxParry}<br>
+          Nội công phòng +{$detail->innerDef}<br>
+
+          {if $inner->type == '0'}
+          Sát thương của chiêu thức mang thuộc tính <span class="fake-pink">Dương, Cương</span> +20%<br>
+          Sát thương của chiêu thức mang thuộc tính <span class="fake-pink">Thái Cực</span> +16%<br>
+          {elseif $inner->type == '1'}
+          Sát thương của chiêu thức mang thuộc tính <span class="fake-pink">Âm, Nhu</span> +20%<br>
+          Sát thương của chiêu thức mang thuộc tính <span class="fake-pink">Thái Cực +16%<br>
+            {else}
+            Sát thương của chiêu thức mang thuộc tính <span class="fake-pink">Thái Cực</span> +20%<br>
+            Sát thương của chiêu thức mang thuộc tính <span class="fake-pink">Dương, Cương, Âm, Nhu</span> +16%<br>
+            {/if}
+        </div>
+
+        <b n:if=" $effectInfo || $effectExtInfo">Đặc hiệu:</b><br>
+        {if strlen($effectInfo) > 0}
+        <div class="effect-info">
+          {$effectInfo}
+        </div>
+        {/if}
+        {if $effectExtInfo}
+        <div class="effect-ext-info">
+        {foreach $effectExtInfo as $k=>$i}
+          <span n:class="count(explode(':', $i))>1 ? 'effect-element-' . $k+1">{explode(':', $i)[0]}</span>{count(explode(':', $i))>1 ? ': ' . explode(':', $i)[1] :''}<br>
+        {/foreach}
+        </div>
+        {/if}
+      </div>
+    </div>
+  </div>
+</div>
+{/block}
+
+{block post-body}
+<!-- <script src="/static/js/noi-cong.js"></script> -->
+<script src="/static/js/noi-cong-common.js"></script>
+{/block}
