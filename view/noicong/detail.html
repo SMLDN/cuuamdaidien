@@ -43,11 +43,13 @@
           <img src="{$imageUrl}" />
         </div>
         <div class="level">
+          <form>
           Công lực<br>
           <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}" class="change-level">-</a>
           <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}" class="change-level">+</a>
           <input x-model="currentLevel"> <span>/{$inner->maxLevel}</span>
-          <button @click="jump">Tới</button>
+          <button type="submit" @click="jump">Tới</button>
+          </form>
         </div>
         <div class="prop">
           Thuộc về: {$inner->school->name}<br>

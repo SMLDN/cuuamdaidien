@@ -1,7 +1,8 @@
 var noiCong = {
     levelUrl: "",
     currentLevel: 1,
-    jump(){
+    jump(e){
+        e.preventDefault();
         window.location.href = this.levelUrl + "/" + this.currentLevel;
     }
 };
