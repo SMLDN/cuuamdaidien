@@ -1287,6 +1287,33 @@ class Inner extends AbstractSeed
                 "type" => "1",
                 "desc" => 'Trong võ lâm Võ Công Tuyệt Học là cao nhất, là Bắc Tống Hoàng Thường đã viết. Đạo của trời, tổn thất có lẽ không bù đắp đủ, hư vốn không thắng thực, không đủ để thắng. Kinh của Tập Thánh Nhân, chân lý đắc đạo, theo lý mà nói, chân lý của Đắc Võ Học.',
             ],
+            // toa vong cong
+            [
+                "id" => 108,
+                "name" => "Tọa Vong Công",
+                "slug" => "toa-vong-cong",
+                "rank" => 1,
+                "max_level" => 42,
+                "max_rage" => 80,
+                "school_id" => 99,
+                "type" => "1",
+                "desc" => 'Tọa Vong Thu Tâm, Chủ Tĩnh Khứ Dục, Tĩnh Tắc Sinh Tuệ, Động Tắc Thành Hôn, Dữ Đạo Minh Nhất, Vạn Lự Giai Di, Li Hình Khứ Trí, Đồng Vu Đại Thông, Thị Vị Tọa Vong.',
+                "effect" => '["","Có xác suất nhất định bỏ qua 20 điểm sát thương.","Có xác suất nhất định bỏ qua 35 điểm sát thương.","Có xác suất nhất định bỏ qua 40 điểm sát thương và thêm 30% sát thương.","Có xác suất nhất định bỏ qua 200 điểm sát thương và thêm 30% sát thương.","Có xác suất bỏ qua 250 điểm và 40% sát thương tăng thêm"]',
+            ],
+            // han bang chan khi
+            [
+                "id" => 109,
+                "name" => "Hàn Băng Chân Khí",
+                "slug" => "han-bang-chan-khi",
+                "rank" => 105,
+                "max_level" => 36,
+                "max_rage" => 100,
+                "school_id" => 99,
+                "type" => "1",
+                "desc" => 'Kỳ công giang hồ, do Tả Lãnh Thiền phái Tung Sơn sáng tạo ra. Tu luyện công pháp cực kỳ hà khắc, tu luyện ở núi tuyết, nạp khí chí âm chí hàn của trời đất, tập trung vào đan điền, triệt thông kinh lạc, sau vài năm chỉ đạt được thành tựu nhỏ. Sau khi tu luyện đại thành, thân thể nếu đang ngưng băng, hàn khí tung tóe, kích phát khi chạm vào địch, làm mạch của địch bất động, có thể: đục khoét cơ thể, phong ấn bát mạch, trì độn thân hình. Thực lực vô cùng đáng sợ!',
+                "effect" => '["","Khi đánh trúng mục tiêu có tỷ lệ thổi vào địch luồng “Hàn Băng Chân Khí”, địch bị chân khí xâm nhập, mỗi lần bị tấn công đều có thể kích phát hàn khí trong cơ thể, khiến trong 6s mỗi lần bị sát thương đều bị đơ. Khi tồn tại hàn khí, mỗi lần bị tấn công đều sẽ chịu sát thương âm nhất định.","Khi đánh trúng mục tiêu có tỷ lệ thổi vào địch luồng “Hàn Băng Chân Khí”, địch bị chân khí xâm nhập, mỗi lần bị tấn công đều có thể kích phát hàn khí trong cơ thể, khiến trong 6s mỗi lần bị sát thương đều bị đơ. Khi tồn tại hàn khí mỗi lần bị tấn công đều sẽ chịu sát thương âm nhất định.","Khi đánh trúng mục tiêu có tỷ lệ thổi vào địch luồng “Hàn Băng Chân Khí”, địch bị chân khí xâm nhập, mỗi lần bị tấn công đều có thể kích phát hàn khí trong cơ thể, khiến trong 8s mỗi lần bị sát thương đều dẫn đến đơ. Khi tồn tại hàn khí mỗi lần bị tấn công đều sẽ chịu sát thương âm nhất định.","Khi đánh trúng mục tiêu có tỷ lệ thổi vào địch luồng “Hàn Băng Chân Khí”, địch bị chân khí xâm nhập, mỗi lần bị tấn công đều có thể kích phát hàn khí trong cơ thể, khiến trong 9s mỗi lần bị sát thương đều dẫn đến đơ. Khi tồn tại hàn khí mỗi lần bị tấn công đều sẽ chịu sát thương âm nhất định."]',
+                "effect_ext" => '["",["Hàn Băng Chân Khí: Chân khí sẽ ẩn nấp lâu trong cơ thể mục tiêu, ngồi thiền điều tức trong thời gian nhất định mới có thể hoá giải."],["Hàn Băng Chân Khí:  chân khí sẽ ẩn nấp lâu trong cơ thể mục tiêu, ngồi thiền điều tức trong thời gian nhất định mới có thể hoá giải."],["Hàn Băng Chân Khí: chân khí sẽ ẩn nấp lâu trong cơ thể mục tiêu, ngồi thiền điều tức trong thời gian nhất định mới có thể hoá giải."],["Hàn Băng Chân Khí:  chân khí sẽ ẩn nấp lâu trong cơ thể mục tiêu, trong thời gian đó có thể tự kích phát hàn khí, ngồi thiền điều tức trong thời gian nhất định mới có thể hoá giải."]]',
+            ],
         ];
         $table = $this->table("inner");
         $table->truncate();
