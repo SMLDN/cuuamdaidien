@@ -49,6 +49,12 @@ class Response extends SlimResponse
         return $this->withStatus(StatusCodeInterface::STATUS_INTERNAL_SERVER_ERROR);
     }
 
+    public function withNotFound($msg)
+    {
+        $this->getBody()->write($msg);
+        return $this->withStatus(StatusCodeInterface::STATUS_NOT_FOUND);
+    }
+
     /**
      * Response với Attach file
      *

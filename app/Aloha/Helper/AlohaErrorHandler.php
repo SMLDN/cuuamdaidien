@@ -5,17 +5,14 @@ use Fig\Http\Message\StatusCodeInterface;
 use Psr\Http\Message\ResponseInterface;
 use Psr\Http\Message\ServerRequestInterface;
 use Slim\Interfaces\ErrorHandlerInterface;
-use Slim\Views\Twig;
 use Throwable;
 
 class AlohaErrorHandler implements ErrorHandlerInterface
 {
-    private $view;
     private $responseFactory;
 
-    public function __construct(Twig $view, $responseFactory)
+    public function __construct($responseFactory)
     {
-        $this->view = $view;
         $this->responseFactory = $responseFactory;
     }
 
@@ -27,6 +24,6 @@ class AlohaErrorHandler implements ErrorHandlerInterface
         bool $logErrorDetails
     ): ResponseInterface {
         $response = $this->responseFactory->createResponse(StatusCodeInterface::STATUS_NOT_FOUND);
-        return $this->view->render($response, "common/404.t");
+        return $response->withError("Có lỗi xảy ra vui lòng truy cập lại sau!");
     }
 }

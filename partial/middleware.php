@@ -20,3 +20,7 @@ $errorMiddleware = new ErrorMiddleware($app->getCallableResolver(), $app->getRes
     $setting->get("errorMiddleware.logErrorDetails"));
 
 $app->add($errorMiddleware);
+
+if ($_ENV["MODE"] == "production") {
+    $errorMiddleware->setDefaultErrorHandler(new AlohaErrorHandler($app->getResponseFactory()));
+}

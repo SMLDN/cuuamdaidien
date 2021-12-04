@@ -1,10 +1,7 @@
-.body-container{
-    text-align: center;
-}
-
 h1{
     color: #c4c5b4;
     font-size: 3em;
+    text-align: center;
 }
 
 .content-list{
@@ -41,4 +38,9 @@ h1{
 
 .item.noi-cong:hover .noi-cong-btn{
     background-image: url('/static/img/ui/noi-cong-in.png');
+}
+
+.release-note{
+    color: white;
+    margin-top: 20px;
 }
