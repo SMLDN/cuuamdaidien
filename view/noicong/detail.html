@@ -1,11 +1,19 @@
 {layout '../layout.html'}
 
-{block title}Cửu Âm Chân Kinh Đại Điển{/block}
+{block title}{$inner->name} - Cửu Âm Đại Điển{/block}
 {block head}
+<meta name="description" content="Thông tin nội công {$inner->name} tầng {$detail->level} - Cửu Âm Đại Điển">
+<meta content="cửu âm đại điển, cadd, cửu âm chân kinh, cửu âm, cack, nội công, kinh mạch, võ học, {$inner->name}" name="keywords">
+<meta property="og:title" content="{$inner->name} - Cửu Âm Đại Điển">
+<meta property="og:description" content="Thông tin nội công {$inner->name} tầng {$detail->level} - Cửu Âm Đại Điển">
+<meta property="og:url" content="https://cuuamdaidien.com/{$inner->slug}/{$detail->level}">
 <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 <link rel="stylesheet" href="/static/css/noi-cong-detail.css">
 {/block}
 
+{block body-header}
+{include '../nav.html'}
+{/block}
 
 {block body}
 <div id="main-container">
@@ -46,7 +54,9 @@
           <form>
           Công lực<br>
           <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}" class="change-level">-</a>
+          <a n:if="strlen($prevLevelUrl) == 0" href="#" class="change-level disabled">-</a>
           <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}" class="change-level">+</a>
+          <a n:if="strlen($nextLevelUrl) == 0" href="#" class="change-level disabled">+</a>
           <input x-model="currentLevel"> <span>/{$inner->maxLevel}</span>
           <button type="submit" @click="jump">Tới</button>
           </form>
@@ -79,8 +89,6 @@
         </div>
 
       </div>
-
-
 
       <div class="inner-detail-info">
 

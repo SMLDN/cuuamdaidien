@@ -1,0 +1,44 @@
+.body-container{
+    text-align: center;
+}
+
+h1{
+    color: #c4c5b4;
+    font-size: 3em;
+}
+
+.content-list{
+    display: flex;
+    justify-content: center;
+}
+
+.content-list a{
+    font-size: 1.5em;
+    color: #c4c5b4;
+    text-decoration: none;
+}
+
+.content-list .item{
+    margin: 5px;
+}
+
+.content-list .item div{
+    margin: 0 auto;
+}
+
+.content-list .noi-cong-btn{
+    background-image: url('/static/img/ui/noi-cong-out.png');
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 59px;
+    height: 45px;
+}
+
+.item.noi-cong:hover a{
+    color: #970700;
+}
+
+.item.noi-cong:hover .noi-cong-btn{
+    background-image: url('/static/img/ui/noi-cong-in.png');
+}

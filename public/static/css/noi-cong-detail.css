@@ -1,5 +1,5 @@
 #main-container{
-    background-image: url('/static/img/ui/bg.png');
+    background-image: url('/static/img/ui/bg4.png');
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -154,7 +154,18 @@
 
 .detail-frame a.change-level{
     font-size: 1.2em;
-    padding: 1px 5px;
+    font-weight: 800;
+    padding: 1px 6px;
+    text-decoration: none;
+}
+
+.detail-frame a.change-level:hover{
+    color: #a81b15;
+}
+
+.detail-frame a.change-level.disabled{
+    color: gray;
+    cursor: default;
 }
 
 .detail-frame .effect-ext-info .effect-element-1{

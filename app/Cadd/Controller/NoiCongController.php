@@ -109,6 +109,6 @@ class NoiCongController
                 return $response;
             }
         }
-        return $response->withError("Khong co cai nay r");
+        return $response->withError("Trang không tồn tại!");
     }
 }

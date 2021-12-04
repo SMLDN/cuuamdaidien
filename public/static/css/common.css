@@ -21,10 +21,16 @@ body {
 
 .nav li{
     display: inline-block;
+    margin-right: 10px;
 }
 
 .nav a{
-    color: white;
+    color: #c4c5b4;
+    text-decoration: none;
+}
+
+.nav a:hover{
+    color: #970700;
 }
 
 .body-container{
