@@ -135,7 +135,7 @@
         {if $effectExtInfo}
         <div class="effect-ext-info">
         {foreach $effectExtInfo as $k=>$i}
-          <span n:class="count(explode(':', $i))>1 ? 'effect-element-' . $k+1">{explode(':', $i)[0]}</span>{count(explode(':', $i))>1 ? ': ' . explode(':', $i)[1] :''}<br>
+          <span n:class="count(explode(':', $i))>1 ? 'effect-element-' . ($k+1)">{explode(':', $i)[0]}</span>{count(explode(':', $i))>1 ? ': ' . explode(':', $i)[1] :''}<br>
         {/foreach}
         </div>
         {/if}
