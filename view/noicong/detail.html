@@ -29,7 +29,7 @@
       {ifset $s["inner"]}
       <div class="inner-list" x-show="showFlg">
         <div class="inner" n:foreach="$s['inner'] as $i">
-          <a n:class='$i["id"] == $inner->id ? "selected" : ""' href="/noi-cong/{$i['slug']}/1">{$i["name"]}</a>
+          <a id='{$i["id"] == $inner->id ? "current-inner-link"}' n:class='$i["id"] == $inner->id ? "selected" : ""' href="/noi-cong/{$i['slug']}/1#current-inner-link">{$i["name"]}</a>
         </div>
       </div>
       {/ifset}
@@ -53,9 +53,9 @@
         <div class="level">
           <form>
           Công lực<br>
-          <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}" class="change-level">-</a>
+          <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}#current-inner-link" class="change-level">-</a>
           <a n:if="strlen($prevLevelUrl) == 0" href="#" class="change-level disabled">-</a>
-          <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}" class="change-level">+</a>
+          <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}#current-inner-link" class="change-level">+</a>
           <a n:if="strlen($nextLevelUrl) == 0" href="#" class="change-level disabled">+</a>
           <input x-model="currentLevel"> <span>/{$inner->maxLevel}</span>
           <button type="submit" @click="jump">Tới</button>

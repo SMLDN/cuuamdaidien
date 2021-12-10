@@ -3,7 +3,7 @@ var noiCong = {
     currentLevel: 1,
     jump(e){
         e.preventDefault();
-        window.location.href = this.levelUrl + "/" + this.currentLevel;
+        window.location.href = this.levelUrl + "/" + this.currentLevel + "#current-inner-link";
     }
 };
 
