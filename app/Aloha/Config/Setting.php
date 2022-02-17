@@ -19,13 +19,19 @@ class Setting
             ],
             "db" => [
                 "driver" => "pgsql",
-                "host" => $_ENV["DB_HOST"],
+                // "host" => $_ENV["DB_HOST"],
                 "database" => $_ENV["DB_DATABASE"],
                 "username" => $_ENV["DB_USERNAME"],
                 "password" => $_ENV["DB_PASSWORD"],
                 "charset" => "utf8",
             ],
         ];
+
+        if (!empty($_ENV["DB_UNIX_SOCKET"])) {
+            $this->defaultSettings["db"]["unix_socket"] = $_ENV["DB_UNIX_SOCKET"];
+        } else {
+            $this->defaultSettings["db"]["host"] = $_ENV["DB_HOST"];
+        }
     }
 
     /**
