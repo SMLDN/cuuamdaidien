@@ -93109,7 +93109,24 @@ class InnerDetail extends AbstractSeed
 				"tu_vi_tien_cap" => 0,
 				"tu_vi_tong" => 107562850,
 			],
-
+			// tao hoa cong
+			[
+				"inner_id" => 112,
+				"level" => 1,
+				"point" => 1,
+				"luc_tay" => 5,
+				"than_phap" => 4,
+				"noi_tuc" => 5,
+				"canh_khi" => 4,
+				"the_phach" => 8,
+				"max_hp" => 90,
+				"max_mp" => 15,
+				"max_parry" => 0,
+				"inner_def" => 0,
+				"effect_level" => 0,
+				"tu_vi_tien_cap" => 0,
+				"tu_vi_tong" => 0,
+			],
 		];
 		$table = $this->table("inner_detail");
 		$table->truncate();
