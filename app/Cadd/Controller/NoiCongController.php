@@ -73,7 +73,7 @@ class NoiCongController
 
     private function getInnerDetail($detail){
         $thucLuc = "Bất Kham Nhất Kích";
-        if($detail->point > 0){
+        if($detail->point > 5){
             $thucLuc = "Sơ Học Sạ Luyện";
         }
 
