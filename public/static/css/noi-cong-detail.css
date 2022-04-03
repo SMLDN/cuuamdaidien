@@ -189,6 +189,20 @@
     font-weight: 700;
 }
 
+.detail-frame .level button{
+    cursor: pointer;
+}
+
+.detail-frame .level .level-input{
+    border: 1px solid #aaa;
+    border-width: 0 0 1px 0;
+    outline: none;
+}
+
+.detail-frame .level .inner-point{
+    font-weight: 600;
+}
+
 .inner-list{
     margin-bottom: 10px;
 }
