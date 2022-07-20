@@ -193,6 +193,13 @@ class School extends AbstractSeed
                 "slug" => "than-co-doanh",
                 "order_num" => 25
             ],
+            [
+                "id" => 26,
+                "name" => "Tinh Miễu Các",
+                "type" => "2",
+                "slug" => "tinh-mieu-cac",
+                "order_num" => 26
+            ],
             //---
             [
                 "id" => 99,
