@@ -1,30 +1,30 @@
-h1{
+h1 {
     color: #c4c5b4;
     font-size: 3em;
     text-align: center;
 }
 
-.content-list{
+.content-list {
     display: flex;
     justify-content: center;
 }
 
-.content-list a{
+.content-list a {
     font-size: 1.5em;
     color: #c4c5b4;
     text-decoration: none;
 }
 
-.content-list .item{
+.content-list .item {
     margin: 5px;
 }
 
-.content-list .item div{
+.content-list .item div {
     margin: 0 auto;
 }
 
-.content-list .noi-cong-btn{
-    background-image: url('/static/img/ui/noi-cong-out.png');
+.content-list .kinh-mach-btn,
+.content-list .noi-cong-btn {
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,15 +32,29 @@ h1{
     height: 45px;
 }
 
-.item.noi-cong:hover a{
+.content-list .noi-cong-btn {
+    background-image: url('/static/img/ui/noi-cong-out.png');
+}
+
+.content-list .kinh-mach-btn {
+    background-image: url('/static/img/ui/kinh-mach-out.png');
+}
+
+.item.noi-cong:hover a,
+.item.kinh-mach:hover a {
     color: #970700;
 }
 
-.item.noi-cong:hover .noi-cong-btn{
+.item.noi-cong:hover .noi-cong-btn {
     background-image: url('/static/img/ui/noi-cong-in.png');
 }
 
-.release-note{
+.item.kinh-mach:hover .kinh-mach-btn {
+    background-image: url('/static/img/ui/kinh-mach-in.png');
+}
+
+
+.release-note {
     color: white;
     margin-top: 20px;
 }
