@@ -22,7 +22,7 @@
     min-width: 550px;
 }
 
-.inner-desc{
+.detail-desc{
     padding-right: 30px;
 }
 
@@ -33,12 +33,15 @@
     padding: 3px;
     background-repeat: no-repeat;
     background-size: 101%;
+
 }
 
 .inner-icon img{
     /* height: 38px;
     width: 38px; */
-    margin: 3px;
+    margin: 2px 3px;
+    width: 49px;
+    height: 49px;
 }
 
 .inner-header{
@@ -207,3 +210,43 @@
     margin-bottom: 10px;
 }
 
+.detail-frame .inner-detail-info .school-name{
+    color: red;
+}
+
+#main-container .tag{
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -24px;
+}
+
+#main-container .tag .tag-element {
+    width: 70px;
+    height: 70px;
+}
+.tag-element .kinh-mach-btn,
+.tag-element .noi-cong-btn {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70px;
+    height: 50px;
+}
+
+.tag-element .noi-cong-btn {
+    background-image: url('/static/img/ui/noi-cong-out.png');
+}
+
+.tag-element:hover .noi-cong-btn,
+.tag-element.actived .noi-cong-btn {
+    background-image: url('/static/img/ui/noi-cong-in.png');
+}
+
+.tag-element .kinh-mach-btn {
+    background-image: url('/static/img/ui/kinh-mach-out.png');
+}
+
+.tag-element:hover .kinh-mach-btn,
+.tag-element.actived .kinh-mach-btn {
+    background-image: url('/static/img/ui/kinh-mach-in.png');
+}

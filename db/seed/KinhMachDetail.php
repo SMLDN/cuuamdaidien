@@ -2784,7 +2784,7 @@ class KinhMachDetail extends AbstractSeed
                 "noi_phong" => 46,
                 "bo_qua_noi_phong" => 137,
                 "khi_huyet" => 1356,
-                "noi_luc" => 200,
+                "noi_luc" => 323,
                 "noi_luc_cooldown" => 7,
                 "chan_khi_tien_cap" => 1266400,
                 "chan_khi_tong" => 104181355,

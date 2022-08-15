@@ -1,0 +1,89 @@
+{layout '../layout.html'}
+
+{block title}{$kinhMach->name} - Cửu Âm Đại Điển{/block}
+{block head}
+<meta name="description" content="Thông tin kinh mạch {$kinhMach->name} tầng {$detail->level} - Cửu Âm Đại Điển">
+<meta content="cửu âm đại điển, cadd, cửu âm chân kinh, cửu âm, cack, nội công, kinh mạch, võ học, {$kinhMach->name}"
+    name="keywords">
+<meta property="og:title" content="{$kinhMach->name} - Cửu Âm Đại Điển">
+<meta property="og:description" content="Thông tin kinh mạch {$kinhMach->name} tầng {$detail->level} - Cửu Âm Đại Điển">
+<meta property="og:url" content="https://cuuamdaidien.com/{$kinhMach->slug}/{$detail->level}">
+<script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
+<link rel="stylesheet" href="/static/css/detail.css">
+{/block}
+
+{block body-header}
+{include '../nav.html'}
+{/block}
+
+{block body}
+<div id="main-container">
+    <div class="tag">
+        <div class="tag-element noi-cong" title="Nội Công"><a href="/noi-cong/thien-dinh-cong/1"><div class="noi-cong-btn"></div></a></div>
+        <div class="tag-element kinh-mach actived" title="Kinh Mạch"><a href="/kinh-mach/thu-thai-am-phe/1"><div class="kinh-mach-btn"></div></a></div>
+    </div>
+    <div class="list-frame">
+    </div>
+
+    <div class="center-frame">
+        <h3 class="inner-desc">{$kinhMach->desc}</h3>
+    </div>
+
+    <div class="detail-frame" x-data="noiCong" x-init="currentLevel = {$detail->level}; levelUrl='{$levelUrl}'">
+        <div class="detail-container">
+
+            <h1>{$kinhMach->name}</h1>
+
+            <div class="inner-header">
+                <div class="inner-icon">
+                    <img src="{$imageUrl}" title="{$kinhMach->name}" alt="{$kinhMach->name}" />
+                </div>
+                <div class="level">
+                </div>
+                <div>
+                    <form @submit="jump">
+                        Chu thiên:<br>
+                        <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}#current-link"
+                            class="change-level">-</a>
+                        <a n:if="strlen($prevLevelUrl) == 0" href="#" class="change-level disabled">-</a>
+                        <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}#current-link"
+                            class="change-level">+</a>
+                        <a n:if="strlen($nextLevelUrl) == 0" href="#" class="change-level disabled">+</a>
+                        <input class="level-input" x-model="currentLevel"> <span>/{$kinhMach->maxLevel}</span>
+                    </form>
+                </div>
+            </div>
+
+            <div class="inner-detail-info">
+                {ifset $chiSo["chinhXac"]}
+                Chính Xác Ngoại Công: +{$chiSo["chinhXac"]}<br>
+                {/ifset}
+                {ifset $chiSo["neTranh"]}
+                Né Tránh: +{$chiSo["neTranh"]}<br>
+                {/ifset}
+                {ifset $chiSo["noiPhong"]}
+                Nội Phòng: +{$chiSo["noiPhong"]}<br>
+                {/ifset}
+                {ifset $chiSo["boQuaNoiPhong"]}
+                Bỏ Qua Nội Phòng: +{$chiSo["boQuaNoiPhong"]}<br>
+                {/ifset}
+                {ifset $chiSo["khiHuyet"]}
+                Khí Huyết: +{$chiSo["khiHuyet"]}<br>
+                {/ifset}
+                {ifset $chiSo["noiLuc"]}
+                Nội Lực: +{$chiSo["noiLuc"]}<br>
+                {/ifset}
+                {ifset $chiSo["noiLucCooldown"]}
+                Rút ngắn thời gian hồi Nội lực(%): +{$chiSo["noiLucCooldown"]}<br>
+                {/ifset}
+
+                <div class="school-name">[Tiến cử {$schoolName} Chủ tu]</div>
+            </div>
+        </div>
+    </div>
+</div>
+{/block}
+
+{block post-body}
+<script src="/static/js/noi-cong-common.js"></script>
+{/block}

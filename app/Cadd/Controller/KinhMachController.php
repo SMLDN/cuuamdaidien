@@ -33,11 +33,38 @@ class KinhMachController
         }
         $response = new Response();
 
-        $kinhMach = KinhMach::with(["detail"])->where("slug", "=", $kinhMach)->orderBy("id")->firstOrFail();
-        dd($kinhMach->detail[$level - 1]->khiHuyet);
+        $kinhMach = KinhMach::with(["detail", "school"])->where("slug", "=", $kinhMach)->orderBy("id")->firstOrFail();
 
-        // return $response;
-        return $response->withNotFound("Rồi rồi kinh mạch ok");
-        // return $response->withNotFound("Trang không tồn tại!");
+        $response = new Response();
+        if (Str::notEmpty($kinhMach)) {
+            if ($kinhMach != null && $level <= count($kinhMach->detail)) {
+                $detail = $kinhMach->detail[$level - 1];
+                $currentLevel = $detail->level;
+                $response->getBody()->write($this->view->renderToString("kinhmach/detail.html", [
+                    "detail" => $detail,
+                    "chiSo" => $this->getChiSo($detail),
+                    "kinhMach" => $kinhMach,
+                    "nextLevelUrl" => $kinhMach->maxLevel - 1 >= $currentLevel ? $this->r->relativeUrlFor("kinh-mach.detail", ["kinhMach" => $kinhMach->slug, "level" => ($detail->level) + 1]) : "",
+                    "prevLevelUrl" => $currentLevel > 1 ? $this->r->relativeUrlFor("kinh-mach.detail", ["kinhMach" => $kinhMach->slug, "level" => ($detail->level) - 1]) : "",
+                    "levelUrl" => $this->r->relativeUrlFor("kinh-mach.detail0", ["kinhMach" => $kinhMach->slug]),
+                    "imageUrl" => "/static/img/kinh-mach/" . $kinhMach->slug . ".png",
+                    "schoolName" => $kinhMach->school->name
+                ]));
+                return $response;
+            }
+        }
+        return $response->withNotFound("Trang không tồn tại!");
+    }
+
+    protected function getChiSo($detail)
+    {
+        $dtl = $detail->getAttributesCamel();
+        $r = [];
+        foreach ($dtl as $d => $c) {
+            if ($c != null and !Str::equal($d, "id") and !Str::equal($d, "kinhMachId") and !Str::equal($d, "level") and !Str::equal($d, "chanKhiTienCap") and !Str::equal($d, "chanKhiTong") and !Str::equal($d, "updatedAt") and !Str::equal($d, "createdAt")) {
+                $r[$d] = $c;
+            }
+        }
+        return $r;
     }
 }

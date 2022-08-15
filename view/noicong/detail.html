@@ -9,7 +9,7 @@
 <meta property="og:description" content="Thông tin nội công {$inner->name} tầng {$detail->level} - Cửu Âm Đại Điển">
 <meta property="og:url" content="https://cuuamdaidien.com/{$inner->slug}/{$detail->level}">
 <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
-<link rel="stylesheet" href="/static/css/noi-cong-detail.css">
+<link rel="stylesheet" href="/static/css/detail.css">
 {/block}
 
 {block body-header}
@@ -18,7 +18,10 @@
 
 {block body}
 <div id="main-container">
-
+  <div class="tag">
+    <div class="tag-element noi-cong actived" title="Nội Công"><a href="/noi-cong/thien-dinh-cong/1"><div class="noi-cong-btn"></div></a></div>
+    <div class="tag-element kinh-mach" title="Kinh Mạch"><a href="/kinh-mach/thu-thai-am-phe/1"><div class="kinh-mach-btn"></div></a></div>
+  </div>
   <div class="list-frame">
     {foreach $schoolList as $s}
     {if $inner->school->id == $s["id"]}
