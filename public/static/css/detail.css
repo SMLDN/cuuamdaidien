@@ -111,8 +111,9 @@
 
 .center-frame{
     padding-top: 50px;
-    max-width: 260px;
-    min-width: 260px;
+    padding-right: 30px;
+    max-width: 240px;
+    min-width: 240px;
 }
 
 .list-frame{

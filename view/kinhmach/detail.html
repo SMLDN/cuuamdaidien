@@ -39,19 +39,40 @@
                     <img src="{$imageUrl}" title="{$kinhMach->name}" alt="{$kinhMach->name}" />
                 </div>
                 <div class="level">
+                    <div>
+                        <form @submit="jump">
+                            Chu thiên:<br>
+                            <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}#current-link"
+                                class="change-level">-</a>
+                            <a n:if="strlen($prevLevelUrl) == 0" href="#" class="change-level disabled">-</a>
+                            <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}#current-link"
+                                class="change-level">+</a>
+                            <a n:if="strlen($nextLevelUrl) == 0" href="#" class="change-level disabled">+</a>
+                            <input class="level-input" x-model="currentLevel"> <span>/{$kinhMach->maxLevel}</span>
+                        </form>
+                    </div>
                 </div>
-                <div>
-                    <form @submit="jump">
-                        Chu thiên:<br>
-                        <a n:if="strlen($prevLevelUrl) > 0" href="{$prevLevelUrl}#current-link"
-                            class="change-level">-</a>
-                        <a n:if="strlen($prevLevelUrl) == 0" href="#" class="change-level disabled">-</a>
-                        <a n:if="strlen($nextLevelUrl) > 0" href="{$nextLevelUrl}#current-link"
-                            class="change-level">+</a>
-                        <a n:if="strlen($nextLevelUrl) == 0" href="#" class="change-level disabled">+</a>
-                        <input class="level-input" x-model="currentLevel"> <span>/{$kinhMach->maxLevel}</span>
-                    </form>
+                <div class="prop">
+                    Chân khí tiến cấp: <span class="tu-vi">{$detail->chanKhiTienCap|number:0,' ', ' '}</span><br>
+                    Tổng chân khí: <span class="tu-vi">{$detail->chanKhiTong|number:0,' ', ' '}</span><br>
+                    Tiến cử người chơi Nội Công: <span class="tu-vi">{for $i = 0; $i < $kinhMach->chiSoTienCuNoi; $i++}★{/for}</span><br>
+                    Tiến cử người chơi Ngoại Công: <span class="tu-vi">{for $i = 0; $i < $kinhMach->chiSoTienCuNgoai; $i++}★{/for}</span><br>
                 </div>
+                <div class="type">
+                    <div>
+                      {if $kinhMach->type == '0'}
+                      <img src="/static/img/ui/duong.png" title="Dương" alt="Dương" />
+                      {elseif $kinhMach->type == '1'}
+                      <img src="/static/img/ui/cuong.png" title="Cương" alt="Cương" />
+                      {elseif $kinhMach->type == '2'}
+                      <img src="/static/img/ui/am.png" title="Âm" alt="Âm" />
+                      {elseif $kinhMach->type == '3'}
+                      <img src="/static/img/ui/nhu.png" title="Nhu" alt="Nhu" />
+                      {elseif $kinhMach->type == '4'}
+                      <img src="/static/img/ui/thai-cuc.png" title="Thái Cực" alt="Thái Cực" />
+                      {/if}
+                    </div>
+                </div>  
             </div>
 
             <div class="inner-detail-info">
@@ -76,6 +97,10 @@
                 {ifset $chiSo["noiLucCooldown"]}
                 Rút ngắn thời gian hồi Nội lực(%): +{$chiSo["noiLucCooldown"]}<br>
                 {/ifset}
+                
+                {if $detail->level == 216}
+                {$kinhMach["chiSoThem"]}
+                {/if}
 
                 <div class="school-name">[Tiến cử {$schoolName} Chủ tu]</div>
             </div>
