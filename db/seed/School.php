@@ -174,7 +174,7 @@ class School extends AbstractSeed
             ],
             [
                 "id" => 22,
-                "name" => "Ngũ Tiên",
+                "name" => "Ngũ Tiên Giáo",
                 "type" => "2",
                 "slug" => "ngu-tien",
                 "order_num" => 23

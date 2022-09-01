@@ -83,8 +83,14 @@
             </div>
 
             <div class="inner-detail-info">
+                {ifset $chiSo["phongKinh"]}
+                Phong Kình: +{$chiSo["phongKinh"]}<br>
+                {/ifset}
                 {ifset $chiSo["chinhXac"]}
                 Chính Xác Ngoại Công: +{$chiSo["chinhXac"]}<br>
+                {/ifset}
+                {ifset $chiSo["chinhXacNoi"]}
+                Chính Xác Nội Công: +{$chiSo["chinhXacNoi"]}<br>
                 {/ifset}
                 {ifset $chiSo["neTranh"]}
                 Né Tránh: +{$chiSo["neTranh"]}<br>
@@ -93,7 +99,13 @@
                 Nội Phòng: +{$chiSo["noiPhong"]}<br>
                 {/ifset}
                 {ifset $chiSo["boQuaNoiPhong"]}
-                Bỏ Qua Nội Phòng: +{$chiSo["boQuaNoiPhong"]}<br>
+                Bỏ qua Nội Phòng: +{$chiSo["boQuaNoiPhong"]}<br>
+                {/ifset}
+                {ifset $chiSo["boQuaNoiGiai"]}
+                Bỏ qua Nội Công Hóa Giải: +{$chiSo["boQuaNoiGiai"]}<br>
+                {/ifset}
+                {ifset $chiSo["noiTuc"]}
+                Nội tức: +{$chiSo["noiTuc"]}<br>
                 {/ifset}
                 {ifset $chiSo["khiHuyet"]}
                 Khí Huyết: +{$chiSo["khiHuyet"]}<br>
@@ -101,11 +113,14 @@
                 {ifset $chiSo["noiLuc"]}
                 Nội Lực: +{$chiSo["noiLuc"]}<br>
                 {/ifset}
+                {ifset $chiSo["satThuongBaoKichNoi"]}
+                Sát thương Nội công bạo kích: +{$chiSo["satThuongBaoKichNoi"]}<br>
+                {/ifset}
                 {ifset $chiSo["noiLucCooldown"]}
                 Rút ngắn thời gian hồi Nội lực(%): +{$chiSo["noiLucCooldown"]}<br>
                 {/ifset}
 
-                {if $detail->level == 216}
+                {if $detail->level == $kinhMach->maxLevel}
                 {$kinhMach["chiSoThem"]}
                 {/if}
                 <div class="school-name">[Tiến cử {$schoolName} Chủ tu]</div>
