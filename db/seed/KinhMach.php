@@ -26,8 +26,21 @@ class KinhMach extends AbstractSeed
                 "desc" => "Theo [Linh Khu] ghi chép, đây là mạch chính của Thủ Tam Âm, khống chế thể chất con người. Mạch này yếu thì gầy ốm, mạnh thì cường tráng. Là mạch mà người tập võ phải luyện. Tiến cử người chơi bộ võ nội công (Sát thương Âm, Dương, Cương, Nhu) khai thông",
                 "chi_so_tien_cu_noi" => 4,
                 "chi_so_tien_cu_ngoai" => 3,
-                "chi_so_them" => "Nội lực: +200",
-                "order_num" => 1
+                "chi_so_them" => "Nội Lực: +200",
+                "order_num" => 2
+            ],
+            [
+                "id" => 2,
+                "name" => "Thủ Thái Âm Phế-Nghịch",
+                "slug" => "thu-thai-am-phe-nghich",
+                "school_id" => 3,
+                "max_level" => 216,
+                "type" => "3", //nhu
+                "desc" => "Bắt đầu từ phần phổi đoạn giữa dạ dày, trượt xuống Xích Trạch, đi đến Kinh Cừ, nhập vào Ngư Tế, đi đến Thiếu Thương của ngón cái. Tiến cử người chơi bộ nội công (Sát thương âm, dương, cương, nhu) khai thông",
+                "chi_so_tien_cu_noi" => 5,
+                "chi_so_tien_cu_ngoai" => 3,
+                "chi_so_them" => "Nội Lực: +200",
+                "order_num" => 3
             ],
         ];
         $table = $this->table("kinh_mach");
