@@ -92,14 +92,14 @@
                 {ifset $chiSo["chinhXacNoi"]}
                 Chính Xác Nội Công: +{$chiSo["chinhXacNoi"]}<br>
                 {/ifset}
+                {ifset $chiSo["baoKichNgoai"]}
+                Ngoại công bạo kích: +{$chiSo["baoKichNgoai"]}<br>
+                {/ifset}
                 {ifset $chiSo["baoKichNoi"]}
                 Nội công bạo kích: +{$chiSo["baoKichNoi"]}<br>
                 {/ifset}
                 {ifset $chiSo["lucTay"]}
                 Lực tay: +{$chiSo["lucTay"]}<br>
-                {/ifset}
-                {ifset $chiSo["noiGiai"]}
-                Nội công hóa giải: +{$chiSo["noiGiai"]}<br>
                 {/ifset}
                 {ifset $chiSo["neTranh"]}
                 Né Tránh: +{$chiSo["neTranh"]}<br>
@@ -116,11 +116,17 @@
                 {ifset $chiSo["noiTuc"]}
                 Nội tức: +{$chiSo["noiTuc"]}<br>
                 {/ifset}
+                {ifset $chiSo["canhKhi"]}
+                Canh khí: +{$chiSo["canhKhi"]}<br>
+                {/ifset}
                 {ifset $chiSo["khiHuyet"]}
                 Khí Huyết: +{$chiSo["khiHuyet"]}<br>
                 {/ifset}
                 {ifset $chiSo["noiLuc"]}
                 Nội Lực: +{$chiSo["noiLuc"]}<br>
+                {/ifset}
+                {ifset $chiSo["noiGiai"]}
+                Nội công hóa giải: +{$chiSo["noiGiai"]}<br>
                 {/ifset}
                 {ifset $chiSo["satThuongBaoKichNoi"]}
                 Sát thương Nội công bạo kích: +{$chiSo["satThuongBaoKichNoi"]}<br>
@@ -131,7 +137,7 @@
                 {ifset $chiSo["mgstBaoKich"]}
                 Giảm sát thương bạo kích(%): +{$chiSo["mgstBaoKich"]}<br>
                 {/ifset}
-
+                
                 {if $detail->level == $kinhMach->maxLevel}
                 {$kinhMach["chiSoThem"]}
                 {/if}

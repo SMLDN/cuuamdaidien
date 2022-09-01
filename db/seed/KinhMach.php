@@ -94,6 +94,32 @@ class KinhMach extends AbstractSeed
                 "chi_so_them" => "Uy lực cận thân: +50",
                 "order_num" => 7
             ],
+            [
+                "id" => 7,
+                "name" => "Túc Thiếu Âm Thận",
+                "slug" => "tuc-thieu-am-than",
+                "school_id" => 2,
+                "max_level" => 216,
+                "type" => "2", //am
+                "desc" => "Một trong Túc Tam Âm Kinh, tương thông với Thủ Thiểu Âm Tâm Kinh. Mạch thông sẽ tăng trí tuệ, nâng cao Nội Tức. Tiến cử cho người chơi bộ võ nội công (sát thương Âm, Dương, Cương, Nhu) khai thông",
+                "chi_so_tien_cu_noi" => 2,
+                "chi_so_tien_cu_ngoai" => 2,
+                "chi_so_them" => "Uy lực nội công: +50",
+                "order_num" => 8
+            ],
+            [
+                "id" => 8,
+                "name" => "Túc Thiếu Âm Thận-Nghịch",
+                "slug" => "tuc-thieu-am-than-nghich",
+                "school_id" => 17,
+                "max_level" => 216,
+                "type" => "0", //duong
+                "desc" => "Bắt đầu từ dưới ngón chân út, nghiêng hướng Sung Tuyền, từ mắt cá chân đến mặt trong cẳng chân, từ phía trong đùi men phía sau đến Trường Cường, từ cột sống vào thận, từ kinh mạch đường thẳng ở thận hướng lên qua gan và cơ hoành vào trong phổi, một mạch từ phổi ra, chụp lại ở tim, chảy vào trong ngực qua Du Phủ Huyệt. Tiến cử người chơi bộ nội công (Sát thương âm, dương, cương, nhu) khai thông",
+                "chi_so_tien_cu_noi" => 3,
+                "chi_so_tien_cu_ngoai" => 3,
+                "chi_so_them" => "Uy lực nội công: +50",
+                "order_num" => 9
+            ],
         ];
         $table = $this->table("kinh_mach");
         $table->truncate();
