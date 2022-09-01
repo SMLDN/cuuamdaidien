@@ -89,14 +89,14 @@
                 {ifset $chiSo["chinhXac"]}
                 Chính Xác Ngoại Công: +{$chiSo["chinhXac"]}<br>
                 {/ifset}
-                {ifset $chiSo["chinhXacNoi"]}
-                Chính Xác Nội Công: +{$chiSo["chinhXacNoi"]}<br>
-                {/ifset}
                 {ifset $chiSo["baoKichNgoai"]}
                 Ngoại công bạo kích: +{$chiSo["baoKichNgoai"]}<br>
                 {/ifset}
                 {ifset $chiSo["baoKichNoi"]}
                 Nội công bạo kích: +{$chiSo["baoKichNoi"]}<br>
+                {/ifset}
+                {ifset $chiSo["chinhXacNoi"]}
+                Chính Xác Nội Công: +{$chiSo["chinhXacNoi"]}<br>
                 {/ifset}
                 {ifset $chiSo["lucTay"]}
                 Lực tay: +{$chiSo["lucTay"]}<br>
@@ -104,14 +104,20 @@
                 {ifset $chiSo["neTranh"]}
                 Né Tránh: +{$chiSo["neTranh"]}<br>
                 {/ifset}
+                {ifset $chiSo["thanPhap"]}
+                Thân Pháp: +{$chiSo["thanPhap"]}<br>
+                {/ifset}
                 {ifset $chiSo["noiPhong"]}
                 Nội Phòng: +{$chiSo["noiPhong"]}<br>
+                {/ifset}
+                {ifset $chiSo["duongPhong"]}
+                Dương phòng: +{$chiSo["duongPhong"]}<br>
                 {/ifset}
                 {ifset $chiSo["boQuaNoiPhong"]}
                 Bỏ qua Nội Phòng: +{$chiSo["boQuaNoiPhong"]}<br>
                 {/ifset}
-                {ifset $chiSo["boQuaNoiGiai"]}
-                Bỏ qua Nội Công Hóa Giải: +{$chiSo["boQuaNoiGiai"]}<br>
+                {ifset $chiSo["amPhong"]}
+                Âm phòng: +{$chiSo["amPhong"]}<br>
                 {/ifset}
                 {ifset $chiSo["noiTuc"]}
                 Nội tức: +{$chiSo["noiTuc"]}<br>
@@ -125,11 +131,17 @@
                 {ifset $chiSo["noiLuc"]}
                 Nội Lực: +{$chiSo["noiLuc"]}<br>
                 {/ifset}
+                {ifset $chiSo["boQuaNoiGiai"]}
+                Bỏ qua Nội Công Hóa Giải: +{$chiSo["boQuaNoiGiai"]}<br>
+                {/ifset}
                 {ifset $chiSo["noiGiai"]}
                 Nội công hóa giải: +{$chiSo["noiGiai"]}<br>
                 {/ifset}
                 {ifset $chiSo["satThuongBaoKichNoi"]}
                 Sát thương Nội công bạo kích: +{$chiSo["satThuongBaoKichNoi"]}<br>
+                {/ifset}
+                {ifset $chiSo["satThuongBaoKichNgoai"]}
+                Sát thương Ngoại công bạo kích: +{$chiSo["satThuongBaoKichNgoai"]}<br>
                 {/ifset}
                 {ifset $chiSo["noiLucCooldown"]}
                 Rút ngắn thời gian hồi Nội lực(%): +{$chiSo["noiLucCooldown"]}<br>

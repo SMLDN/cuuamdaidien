@@ -120,6 +120,58 @@ class KinhMach extends AbstractSeed
                 "chi_so_them" => "Uy lực nội công: +50",
                 "order_num" => 9
             ],
+            [
+                "id" => 9,
+                "name" => "Túc Quyết Âm Can",
+                "slug" => "tuc-quyet-am-can",
+                "school_id" => 8,
+                "max_level" => 216,
+                "type" => "3", //nhu
+                "desc" => "Một trong Túc Tam Âm Kinh, tương thông với Thủ Quyết Âm Kinh Dao, tăng cường khí huyết. Tiến cử cho người chơi bộ võ nội công (sát thương Âm, Dương, Cương, Nhu) khai thông",
+                "chi_so_tien_cu_noi" => 5,
+                "chi_so_tien_cu_ngoai" => 1,
+                "chi_so_them" => "Hồi khí huyết: +19",
+                "order_num" => 10
+            ],
+            [
+                "id" => 10,
+                "name" => "Túc Quyết Âm Can-Nghịch",
+                "slug" => "tuc-quyet-am-can-nghich",
+                "school_id" => 21,
+                "max_level" => 216,
+                "type" => "4", //thai cuc
+                "desc" => "Bắt đầu từ Đại Đôn, men sau chân đến mắt cá chân, từ phía sau chân lên bụng, kẹp bên cạnh dạ dày thuộc gan túi mật, đi lên cơ hoành rồi tỏa ra sườn. Tiến cử người chơi bộ nội công (Sát thương âm, dương, cương, nhu) khai thông",
+                "chi_so_tien_cu_noi" => 5,
+                "chi_so_tien_cu_ngoai" => 5,
+                "chi_so_them" => "Hồi khí huyết: +19",
+                "order_num" => 11
+            ],
+            [
+                "id" => 11,
+                "name" => "Túc Thái Âm Tỳ",
+                "slug" => "tuc-thai-am-ty",
+                "school_id" => 5,
+                "max_level" => 216,
+                "type" => "4", //thai cuc
+                "desc" => "Đứng đầu Túc Tam Âm, mạch cốt yếu trong 12 mạch chủ, gọi là Tinh Kinh. Mạch này thông sẽ gia tăng Nội Lực, võ học sẽ tiến bộ vượt bậc. Tiến cử người chơi bộ võ ngoại công (sát thương ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 2,
+                "chi_so_tien_cu_ngoai" => 5,
+                "chi_so_them" => "Sức đỡ đòn hồi: +30",
+                "order_num" => 12
+            ],
+            [
+                "id" => 12,
+                "name" => "Túc Thái Âm Tỳ-Nghịch",
+                "slug" => "tuc-thai-am-ty-nghich",
+                "school_id" => 19,
+                "max_level" => 216,
+                "type" => "2", //am
+                "desc" => "Đứng đầu Túc Tam Âm, mạch cốt yếu trong 12 mạch chủ, gọi là Tinh Kinh. Mạch này thông sẽ gia tăng Nội Lực, võ học sẽ tiến bộ vượt bậc. Tiến cử người chơi bộ võ ngoại công (sát thương ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 2,
+                "chi_so_tien_cu_ngoai" => 5,
+                "chi_so_them" => "Sức đỡ đòn hồi: +30",
+                "order_num" => 13
+            ],
         ];
         $table = $this->table("kinh_mach");
         $table->truncate();

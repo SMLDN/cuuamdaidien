@@ -45,6 +45,10 @@ final class KinhMachDetail extends AbstractMigration
             ->addColumn("mgst_bao_kich", "integer", ["null" => true])
             ->addColumn("bao_kich_ngoai", "integer", ["null" => true])
             ->addColumn("canh_khi", "integer", ["null" => true])
+            ->addColumn("am_phong", "integer", ["null" => true])
+            ->addColumn("duong_phong", "integer", ["null" => true])
+            ->addColumn("than_phap", "integer", ["null" => true])
+            ->addColumn("sat_thuong_bao_kich_ngoai", "integer", ["null" => true])
             ->addColumn("created_at", "timestamp", ["null" => true, "default" => "CURRENT_TIMESTAMP", "timezone" => false])
             ->addColumn("updated_at", "timestamp", ["null" => true, "timezone" => false])
             ->create();
