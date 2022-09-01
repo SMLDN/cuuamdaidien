@@ -37,6 +37,8 @@ class KinhMachController
 
         $response = new Response();
         if (Str::notEmpty($kinhMach)) {
+            $kinhMachList = CollectionUtil::toArrayCamel(KinhMach::orderBy("order_num")->get());
+
             if ($kinhMach != null && $level <= count($kinhMach->detail)) {
                 $detail = $kinhMach->detail[$level - 1];
                 $currentLevel = $detail->level;
@@ -48,7 +50,8 @@ class KinhMachController
                     "prevLevelUrl" => $currentLevel > 1 ? $this->r->relativeUrlFor("kinh-mach.detail", ["kinhMach" => $kinhMach->slug, "level" => ($detail->level) - 1]) : "",
                     "levelUrl" => $this->r->relativeUrlFor("kinh-mach.detail0", ["kinhMach" => $kinhMach->slug]),
                     "imageUrl" => "/static/img/kinh-mach/" . $kinhMach->slug . ".png",
-                    "schoolName" => $kinhMach->school->name
+                    "schoolName" => $kinhMach->school->name,
+                    "kinhMachList" => $kinhMachList
                 ]));
                 return $response;
             }

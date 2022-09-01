@@ -156,6 +156,10 @@
     color: #a81b15;
 }
 
+.list-frame.kinh-mach{
+    padding-top: 10px;
+}
+
 .detail-frame a.change-level{
     font-size: 1.2em;
     font-weight: 800;

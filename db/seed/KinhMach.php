@@ -27,6 +27,7 @@ class KinhMach extends AbstractSeed
                 "chi_so_tien_cu_noi" => 4,
                 "chi_so_tien_cu_ngoai" => 3,
                 "chi_so_them" => "Nội lực: +200",
+                "order_num" => 1
             ],
         ];
         $table = $this->table("kinh_mach");

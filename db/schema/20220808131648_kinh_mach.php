@@ -31,6 +31,8 @@ final class KinhMach extends AbstractMigration
             ->addColumn("chi_so_tien_cu_noi", "smallinteger", ["null" => true])
             ->addColumn("chi_so_tien_cu_ngoai", "smallinteger", ["null" => true])
             ->addColumn("chi_so_them", "text", ["null" => true])
+            ->addColumn("order_num", "integer", ["null" => true])
+            ->addIndex("order_num")
             ->addColumn("created_at", "timestamp", ["null" => true, "default" => "CURRENT_TIMESTAMP", "timezone" => false])
             ->addColumn("updated_at", "timestamp", ["null" => true, "timezone" => false])
             ->create();

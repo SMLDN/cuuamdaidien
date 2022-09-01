@@ -22,7 +22,14 @@
         <div class="tag-element noi-cong" title="Nội Công"><a href="/noi-cong/thien-dinh-cong/1"><div class="noi-cong-btn"></div></a></div>
         <div class="tag-element kinh-mach actived" title="Kinh Mạch"><a href="/kinh-mach/thu-thai-am-phe/1"><div class="kinh-mach-btn"></div></a></div>
     </div>
-    <div class="list-frame">
+
+    <div class="list-frame kinh-mach">
+        {foreach $kinhMachList as $km}
+            <div class="inner">
+                <a id='{$km["id"] == $kinhMach->id ? "current-inner-link"}' n:class='$km["id"] == $kinhMach->id ? "selected" : ""'
+                href="/kinh-mach/{$km['slug']}/1#current-inner-link">{$km["name"]}</a>
+            </div>
+        {/foreach}
     </div>
 
     <div class="center-frame">
