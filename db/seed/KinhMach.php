@@ -224,6 +224,58 @@ class KinhMach extends AbstractSeed
                 "chi_so_them" => "Khí huyết: +300",
                 "order_num" => 17
             ],
+            [
+                "id" => 17,
+                "name" => "Thủ Dương Minh Đại Trường",
+                "slug" => "thu-duong-minh-dai-truong",
+                "school_id" => 9,
+                "max_level" => 216,
+                "type" => "1", //cuong
+                "desc" => "Một trong Thủ Tam Dương Kinh, nếu đồng tu với Túc Dương Minh Vị, thì có thể khiến xuất thủ như điện, hành động như gió. Tiến cử người chơi bộ võ ngoại công (sát thương ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 3,
+                "chi_so_tien_cu_ngoai" => 3,
+                "chi_so_them" => "Khí huyết: +300",
+                "order_num" => 18
+            ],
+            [
+                "id" => 18,
+                "name" => "Thủ Dương Minh Đại Trường-Nghịch",
+                "slug" => "thu-duong-minh-dai-truong-nghich",
+                "school_id" => 24,
+                "max_level" => 216,
+                "type" => "3", //nhu
+                "desc" => "Giờ mão bắt đầu vận hành, giờ mão là giờ sinh, bắt đầu từ Thương Dương, kết thúc ở Nghênh Hương. Tiến cử người chơi bộ ngoại công (Sát thương ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 4,
+                "chi_so_tien_cu_ngoai" => 4,
+                "chi_so_them" => "Khí huyết: +300",
+                "order_num" => 19
+            ],
+            [
+                "id" => 19,
+                "name" => "Túc Thái Dương Bàng Quang",
+                "slug" => "tuc-thai-duong-bang-quang",
+                "school_id" => 10,
+                "max_level" => 216,
+                "type" => "2", //am
+                "desc" => "Mạch phụ trách hoạt động khí huyết, là một trong ba kinh mạch dương của bàn chân, học kinh mạch này xong có thể giúp người học võ tự do khống chế kinh mạch toàn thân, thoải mái hơn khi gặp hiểm nguy. Tiến cử bộ nội ngoại công (sát thương nội ngoại công ) khai thông",
+                "chi_so_tien_cu_noi" => 3,
+                "chi_so_tien_cu_ngoai" => 3,
+                "chi_so_them" => "Khí huyết: +300",
+                "order_num" => 20
+            ],
+            [
+                "id" => 20,
+                "name" => "Túc Thái Dương Bàng Quang-Nghịch",
+                "slug" => "tuc-thai-duong-bang-quang-nghich",
+                "school_id" => 26,
+                "max_level" => 216,
+                "type" => "0", //duong
+                "desc" => "Bắt đầu từ mắt lên búi tóc, từ phía sau đầu men theo hai sườn cột sống đến cuối đường chính giữa phía sau chân, đến chí âm của sườn ngoài ngón chân nhỏ. Tiến cử bộ nội ngoại công (Sát thương nội ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 3,
+                "chi_so_tien_cu_ngoai" => 3,
+                "chi_so_them" => "Khí huyết: +300",
+                "order_num" => 21
+            ],
 
         ];
         $table = $this->table("kinh_mach");

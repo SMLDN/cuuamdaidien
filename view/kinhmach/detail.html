@@ -164,6 +164,15 @@
                 {ifset $chiSo["khiHuyetCooldown"]}
                 Rút ngắn thời gian hồi Khí huyết(%): +{$chiSo["khiHuyetCooldown"]}<br>
                 {/ifset}
+                {ifset $chiSo["tlbkGiam"]}
+                Xác suất bị bạo kích giảm(%): +{$chiSo["tlbkGiam"]}<br>
+                {/ifset}
+                {ifset $chiSo["tyLeChinhXac"]}
+                Chính xác Ngoại công(%): +{$chiSo["tyLeChinhXac"]}<br>
+                {/ifset}
+                {ifset $chiSo["tyLeChinhXacNoi"]}
+                Chính xác Nội công(%): +{$chiSo["tyLeChinhXacNoi"]}<br>
+                {/ifset}
                 
                 {if $detail->level == $kinhMach->maxLevel}
                 {$kinhMach["chiSoThem"]}
