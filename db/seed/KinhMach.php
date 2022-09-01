@@ -172,6 +172,59 @@ class KinhMach extends AbstractSeed
                 "chi_so_them" => "Sức đỡ đòn hồi: +30",
                 "order_num" => 13
             ],
+            [
+                "id" => 13,
+                "name" => "Túc Thiếu Dương Đảm",
+                "slug" => "tuc-thieu-duong-dam",
+                "school_id" => 7,
+                "max_level" => 216,
+                "type" => "3", //nhu
+                "desc" => "Đây là chủ mạch của Tam Dương Kinh, tu luyện cùng Thủ Tam Tiêu Kinh sẽ giúp người tu luyện có sức mạnh vô song, không ai địch nổi. Tiến cử người chơi bộ võ ngoại công (sát thương ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 2,
+                "chi_so_tien_cu_ngoai" => 5,
+                "chi_so_them" => "Sức đỡ đòn: +600",
+                "order_num" => 14
+            ],
+            [
+                "id" => 14,
+                "name" => "Túc Thiếu Dương Đảm-Nghịch",
+                "slug" => "tuc-thieu-duong-dam-nghich",
+                "school_id" => 16,
+                "max_level" => 216,
+                "type" => "4", //thai cuc
+                "desc" => "Bắt đầu từ Đồng Tử Liêu Huyệt ở ngoài mắt, lên đến sau góc đầu xuống Phong Trì sau tai, từ Khuyết Bồn đi xuống nách, men theo ngực đi qua Quý Hiếp và mạch nhánh ở dưới xương lớn của xương chậu sẽ men theo mặt ngoài của bắp đùi chạy thẳng đến chân, qua Khiếu Âm  từ Lâm Khấp đến ngón thứ 4. Tiến cử người chơi bộ ngoại công (Sát thương ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 2,
+                "chi_so_tien_cu_ngoai" => 5,
+                "chi_so_them" => "Sức đỡ đòn: +600",
+                "order_num" => 15
+            ],
+            [
+                "id" => 15,
+                "name" => "Túc Dương Minh Vị",
+                "slug" => "tuc-duong-minh-vi",
+                "school_id" => 1,
+                "max_level" => 216,
+                "type" => "4", //thai cuc
+                "desc" => "Đây là một trong những mạch của Túc Tam Dương Kinh, có công hiệu giống Đại Trường Kinh của Thủ Tam Dương, tăng độ linh hoạt của chân, giúp người tu luyện nhẹ như lông vũ, nhanh như thỏ.<br>Tiến cử người chơi bộ võ ngoại công (sát thương ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 3,
+                "chi_so_tien_cu_ngoai" => 4,
+                "chi_so_them" => "Khí huyết: +300",
+                "order_num" => 16
+            ],
+            [
+                "id" => 16,
+                "name" => "Túc Dương Minh Vị-Nghịch",
+                "slug" => "tuc-duong-minh-vi-nghich",
+                "school_id" => 23,
+                "max_level" => 216,
+                "type" => "2", //am
+                "desc" => "Bắt đầu ở Thừa Khấp chỗ cánh mũi, men theo họng xuống Đại Chùy, vào Khuyết Bồn, đi sâu vào khoang, từ môn vị chỗ dạ dày chia ra, men theo ổ bụng đến Khí Xung, xuống sườn trước bắp đùi, đến xương bánh chè, men theo xương ống đến bàn chân, vào mặt ngoài xương ngón chân (Lệ Đoái Huyệt). Tiến cử người chơi bộ ngoại công (Sát thương ngoại công) khai thông",
+                "chi_so_tien_cu_noi" => 2,
+                "chi_so_tien_cu_ngoai" => 5,
+                "chi_so_them" => "Khí huyết: +300",
+                "order_num" => 17
+            ],
+
         ];
         $table = $this->table("kinh_mach");
         $table->truncate();

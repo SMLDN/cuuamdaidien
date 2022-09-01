@@ -83,14 +83,26 @@
             </div>
 
             <div class="inner-detail-info">
-                {ifset $chiSo["phongKinh"]}
-                Phong Kình: +{$chiSo["phongKinh"]}<br>
+                {ifset $chiSo["baoKichNgoai"]}
+                Ngoại công bạo kích: +{$chiSo["baoKichNgoai"]}<br>
                 {/ifset}
                 {ifset $chiSo["chinhXac"]}
                 Chính Xác Ngoại Công: +{$chiSo["chinhXac"]}<br>
                 {/ifset}
-                {ifset $chiSo["baoKichNgoai"]}
-                Ngoại công bạo kích: +{$chiSo["baoKichNgoai"]}<br>
+                {ifset $chiSo["phongKinh"]}
+                Phong Kình: +{$chiSo["phongKinh"]}<br>
+                {/ifset}
+                {ifset $chiSo["thePhach"]}
+                Thể Phách: +{$chiSo["thePhach"]}<br>
+                {/ifset}
+                {ifset $chiSo["hoiKhiHuyet"]}
+                Hồi khí huyết: +{$chiSo["hoiKhiHuyet"]}<br>
+                {/ifset}
+                {ifset $chiSo["cuongPhong"]}
+                Cương phòng: +{$chiSo["cuongPhong"]}<br>
+                {/ifset}
+                {ifset $chiSo["nhuPhong"]}
+                Nhu phòng: +{$chiSo["nhuPhong"]}<br>
                 {/ifset}
                 {ifset $chiSo["baoKichNoi"]}
                 Nội công bạo kích: +{$chiSo["baoKichNoi"]}<br>
@@ -148,6 +160,9 @@
                 {/ifset}
                 {ifset $chiSo["mgstBaoKich"]}
                 Giảm sát thương bạo kích(%): +{$chiSo["mgstBaoKich"]}<br>
+                {/ifset}
+                {ifset $chiSo["khiHuyetCooldown"]}
+                Rút ngắn thời gian hồi Khí huyết(%): +{$chiSo["khiHuyetCooldown"]}<br>
                 {/ifset}
                 
                 {if $detail->level == $kinhMach->maxLevel}
