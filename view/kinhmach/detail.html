@@ -92,6 +92,15 @@
                 {ifset $chiSo["chinhXacNoi"]}
                 Chính Xác Nội Công: +{$chiSo["chinhXacNoi"]}<br>
                 {/ifset}
+                {ifset $chiSo["baoKichNoi"]}
+                Nội công bạo kích: +{$chiSo["baoKichNoi"]}<br>
+                {/ifset}
+                {ifset $chiSo["lucTay"]}
+                Lực tay: +{$chiSo["lucTay"]}<br>
+                {/ifset}
+                {ifset $chiSo["noiGiai"]}
+                Nội công hóa giải: +{$chiSo["noiGiai"]}<br>
+                {/ifset}
                 {ifset $chiSo["neTranh"]}
                 Né Tránh: +{$chiSo["neTranh"]}<br>
                 {/ifset}
@@ -118,6 +127,9 @@
                 {/ifset}
                 {ifset $chiSo["noiLucCooldown"]}
                 Rút ngắn thời gian hồi Nội lực(%): +{$chiSo["noiLucCooldown"]}<br>
+                {/ifset}
+                {ifset $chiSo["mgstBaoKich"]}
+                Giảm sát thương bạo kích(%): +{$chiSo["mgstBaoKich"]}<br>
                 {/ifset}
 
                 {if $detail->level == $kinhMach->maxLevel}

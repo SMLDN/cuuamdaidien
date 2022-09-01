@@ -66,7 +66,33 @@ class KinhMach extends AbstractSeed
                 "chi_so_tien_cu_noi" => 5,
                 "chi_so_tien_cu_ngoai" => 1,
                 "chi_so_them" => "Hồi Nội Lực: +12",
-                "order_num" => 4
+                "order_num" => 5
+            ],
+            [
+                "id" => 5,
+                "name" => "Thủ Thái Dương Tiểu Trường",
+                "slug" => "thu-thai-duong-tieu-truong",
+                "school_id" => 4,
+                "max_level" => 216,
+                "type" => "0", //duong
+                "desc" => "Hợp với Tam Âm chủ mạch, giúp thể phách của người tu luyện thêm kiên cố, tăng sức chống cự. Tiến cử cho người chơi bộ võ nội công (sát thương Âm, Dương, Cương, Nhu) khai thông",
+                "chi_so_tien_cu_noi" => 4,
+                "chi_so_tien_cu_ngoai" => 2,
+                "chi_so_them" => "Uy lực cận thân: +50",
+                "order_num" => 6
+            ],
+            [
+                "id" => 6,
+                "name" => "Thủ Thái Dương Tiểu Trường-Nghịch",
+                "slug" => "thu-thai-duong-tieu-truong-nghich",
+                "school_id" => 18,
+                "max_level" => 216,
+                "type" => "1", //cuong
+                "desc" => "Bắt đầu từ Tiểu Trạch của ngón út, men theo phía ngoài cánh tay đi lên bả vai, nhập vào Khuyết Bồn, liên hệ với tim, men theo thực quản xuống dạ dày, kết nối với ruột non, một tĩnh mạch từ xương quai xanh chạy lên má rồi đến góc mắt ngoài và thính quản. Tiến cử người chơi bộ nội công (Sát thương âm, dương, cương, nhu) khai thông",
+                "chi_so_tien_cu_noi" => 4,
+                "chi_so_tien_cu_ngoai" => 3,
+                "chi_so_them" => "Uy lực cận thân: +50",
+                "order_num" => 7
             ],
         ];
         $table = $this->table("kinh_mach");
