@@ -3,6 +3,7 @@
 namespace Cadd\Config;
 
 use Aura\Di\Container;
+use Cadd\Controller\ApiController;
 use Cadd\Controller\HomeController;
 use Cadd\Controller\NoiCongController;
 use Cadd\Controller\KinhMachController;
@@ -21,6 +22,7 @@ class ControllerConfig extends AuraContainerConfig
         $container->set(HomeController::class, $container->lazyNew(HomeController::class));
         $container->set(NoiCongController::class, $container->lazyNew(NoiCongController::class));
         $container->set(KinhMachController::class, $container->lazyNew(KinhMachController::class));
+        $container->set(ApiController::class, $container->lazyNew(ApiController::class));
     }
 
     /**
