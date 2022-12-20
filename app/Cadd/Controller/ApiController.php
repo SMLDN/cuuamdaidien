@@ -53,7 +53,6 @@ class ApiController
 
     protected function doSendMsg($channelId, $msg)
     {
-
         if (strlen($channelId) <= 0) {
             return;
         }
@@ -89,7 +88,10 @@ class ApiController
     public function sendDiscordMsg(ServerRequestInterface $request, ResponseInterface $response, $args)
     {
         if ($args["footprint"] == "zdndoilacaidinh") {
-            $this->doSendMsg($args["channelId"], $args["msg"]);
+            $param = $request->getParsedBody();
+            if (isset($param["msg"])) {
+                $this->doSendMsg($args["channelId"], $param["msg"]);
+            }
         }
         $response = new Response();
         $response->withJson(["result" => "ok"]);
