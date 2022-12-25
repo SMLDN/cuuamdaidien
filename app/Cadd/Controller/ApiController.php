@@ -18,7 +18,7 @@ class ApiController
             return;
         }
         $channelId = "1055497571893776438";
-        if (str_contains($msg, "Đăng nhập.")) {
+        if (str_contains($msg, "Đăng nhập.") or str_contains($msg, "Đăng xuất.")) {
             $channelId = "1055870250186457269";
         }
 
