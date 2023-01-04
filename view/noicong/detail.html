@@ -3,11 +3,14 @@
 {block title}{$inner->name} - Cửu Âm Đại Điển{/block}
 {block head}
 <meta name="description" content="Thông tin nội công {$inner->name} tầng {$detail->level} - Cửu Âm Đại Điển">
-<meta content="cửu âm đại điển, cadd, cửu âm chân kinh, cửu âm, cack, nội công, kinh mạch, võ học, {$inner->name}"
+<meta name="keywords" content="auto cửu âm, auto 9yin, auto cack, cửu âm đại điển, cadd, cửu âm chân kinh, cửu âm, cack, nội công, kinh mạch, võ học, {$inner->name}"
   name="keywords">
 <meta property="og:title" content="{$inner->name} - Cửu Âm Đại Điển">
 <meta property="og:description" content="Thông tin nội công {$inner->name} tầng {$detail->level} - Cửu Âm Đại Điển">
 <meta property="og:url" content="https://cuuamdaidien.com/{$inner->slug}/{$detail->level}">
+{if $inner->maxLevel != $detail->level}
+<link rel="canonical" href="https://cuuamdaidien.com/{$inner->slug}/{$inner->maxLevel}"/>
+{/if}
 <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 <link rel="stylesheet" href="/static/css/detail.css">
 {/block}
@@ -34,7 +37,7 @@
         <div class="inner-list" x-show="showFlg">
           <div class="inner" n:foreach="$s['inner'] as $i">
             <a id='{$i["id"] == $inner->id ? "current-inner-link"}' n:class='$i["id"] == $inner->id ? "selected" : ""'
-              href="/noi-cong/{$i['slug']}/1#current-inner-link">{$i["name"]}</a>
+              href="/noi-cong/{$i['slug']}/{$i['maxLevel']}#current-inner-link">{$i["name"]}</a>
           </div>
         </div>
         {/ifset}

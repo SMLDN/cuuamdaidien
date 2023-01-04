@@ -3,11 +3,14 @@
 {block title}{$kinhMach->name} - Cửu Âm Đại Điển{/block}
 {block head}
 <meta name="description" content="Thông tin kinh mạch {$kinhMach->name} tầng {$detail->level} - Cửu Âm Đại Điển">
-<meta content="cửu âm đại điển, cadd, cửu âm chân kinh, cửu âm, cack, nội công, kinh mạch, võ học, {$kinhMach->name}"
+<meta content="auto cửu âm, auto 9yin, auto cack, cửu âm đại điển, cadd, cửu âm chân kinh, cửu âm, cack, nội công, kinh mạch, võ học, {$kinhMach->name}"
     name="keywords">
 <meta property="og:title" content="{$kinhMach->name} - Cửu Âm Đại Điển">
 <meta property="og:description" content="Thông tin kinh mạch {$kinhMach->name} tầng {$detail->level} - Cửu Âm Đại Điển">
 <meta property="og:url" content="https://cuuamdaidien.com/{$kinhMach->slug}/{$detail->level}">
+{if $kinhMach->maxLevel != $detail->level}
+<link rel="canonical" href="https://cuuamdaidien.com/{$kinhMach->slug}/{$kinhMach->maxLevel}"/>
+{/if}
 <script defer src="https://unpkg.com/alpinejs@3.4.2/dist/cdn.min.js"></script>
 <link rel="stylesheet" href="/static/css/detail.css">
 {/block}
@@ -27,7 +30,7 @@
         {foreach $kinhMachList as $km}
             <div class="inner">
                 <a id='{$km["id"] == $kinhMach->id ? "current-inner-link"}' n:class='$km["id"] == $kinhMach->id ? "selected" : ""'
-                href="/kinh-mach/{$km['slug']}/1#current-inner-link">{$km["name"]}</a>
+                href="/kinh-mach/{$km['slug']}/{$km['maxLevel']}#current-inner-link">{$km["name"]}</a>
             </div>
         {/foreach}
     </div>
